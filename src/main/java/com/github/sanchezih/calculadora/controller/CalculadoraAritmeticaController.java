@@ -27,4 +27,14 @@ public class CalculadoraAritmeticaController {
 			@RequestParam("operando2") Integer operando2) {
 		return operando1 * operando2;
 	}
+	@RequestMapping(value = "/restar", method = RequestMethod.GET, params = { "operando1", "operando2" })
+	public Integer restar(@RequestParam("operando1") Integer operando1,
+			@RequestParam("operando2") Integer operando2) {
+		return operando1 - operando2;
+	}
+	@RequestMapping(value = "/dividir", method = RequestMethod.GET, params = { "operando1", "operando2" })
+	public Integer dividir(@RequestParam("operando1") Integer operando1,
+			@RequestParam("operando2") Integer operando2) {
+		return operando1 / operando2;
+	}
 }
