@@ -12,6 +12,11 @@ public class CalculadoraAritmeticaController {
 	public CalculadoraAritmeticaController() {
 	}
 
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String index() {
+		return "Welcome to calculadoraApp";
+	}
+	
 	@RequestMapping(value = "/sumar", method = RequestMethod.GET, params = { "operando1", "operando2" })
 	public Integer sumar(@RequestParam("operando1") Integer operando1, @RequestParam("operando2") Integer operando2) {
 		return operando1 + operando2;
